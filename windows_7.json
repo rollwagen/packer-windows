@@ -197,28 +197,6 @@
       "type": "windows-restart"
     },
     {
-      "user": "vagrant",
-      "use_proxy": false,
-      "extra_arguments": ["-e", "ansible_winrm_server_cert_validation=ignore", "-e", "ansible_winrm_scheme=http"],
-      "playbook_file": "./ansible/windows_update_security_updates.yml",
-      "type": "ansible"
-    },
-    {
-      "restart_timeout": "{{user `restart_timeout`}}",
-      "type": "windows-restart"
-    },
-    {
-      "user": "vagrant",
-      "use_proxy": false,
-      "extra_arguments": ["-e", "ansible_winrm_server_cert_validation=ignore", "-e", "ansible_winrm_scheme=http"],
-      "playbook_file": "./ansible/windows_update.yml",
-      "type": "ansible"
-    },
-    {
-      "restart_timeout": "{{user `restart_timeout`}}",
-      "type": "windows-restart"
-    },
-    {
       "scripts": [
         "./scripts/vm-guest-tools.bat",
         "./scripts/enable-rdp.bat",
